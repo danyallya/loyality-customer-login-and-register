@@ -1,0 +1,133 @@
+@media screen and (max-width: 900px) {
+    .menu-bar {
+        position: relative;
+        width: 96%;
+    }
+
+    .menu-items {
+
+        right: 10%;
+        top: 50px;
+
+    }
+
+    .menu-bar-items {
+        position: relative;
+        width: 96%;
+        overflow: visible !important;
+        height: auto;
+        top: 20%;
+
+    }
+
+    .main {
+        position: relative;
+        width: 96%;
+        right: 20px;
+        top: 25%;
+        /* height: 500px; */
+        /* background-color: wheat; */
+    }
+
+    .user-item span {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    .gift-box {
+        font-size: 11px !important;
+    }
+
+
+}
+
+@media screen and (max-width: 992px) {
+    .gift-img {
+        width: 50px;
+        height: 50px;
+        float: none;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-left: none;
+        border: 1px solid #3ba4b3;
+        overflow: hidden;
+        box-shadow: 0 0 10px -10px black;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .user-item span {
+        display: none;
+
+    }
+
+    .user-item i {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header {
+        height: 13%;
+    }
+
+    .header-item i {
+        font-size: 15px !important;;
+    }
+
+    .header-item {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /*tbody tr td, tbody tr th {*/
+    /*padding: 10px !important;*/
+    /*padding-top: 20px!important;*/
+    /*font-size: 11px;*/
+    /*}*/
+    /*table thead tr th {*/
+    /*padding: 10px !important;*/
+    /*font-size: 11px;*/
+    /*}*/
+}
+
+@media screen and (max-width: 580px) {
+
+    .header-item:last-child i {
+        margin-top: -7px;
+        margin-bottom: 12px;
+    }
+
+}
+
+@media screen and (max-width: 440px) {
+.dropdown > span,.dropdown-list li span{
+    font-size: 10px!important;
+}
+    /*tbody tr td, tbody tr th {*/
+    /*padding: 8px !important;*/
+    /*padding-top: 20px!important;*/
+    /*font-size: 9px;*/
+    /*}*/
+    /*table thead tr th {*/
+    /*padding: 8px !important;*/
+    /*font-size: 9px;*/
+    /*}*/
+
+}
+
+@media screen and (max-width: 370px) {
+
+    .notifi-box {
+
+        width: 300px;
+
+    }
+
+}

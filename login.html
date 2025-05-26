@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assist/css/bootstrap.rtl.css">
+
+    <link rel="stylesheet" type="text/css" href="assist/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assist/css/register.css">
+
+    <link rel="stylesheet" type="text/css" href="assist/css/responsive.css">
+
+    <link rel="stylesheet" type="text/css" href="assist/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assist/css/fontawesome.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <title>
+        لویالتی
+    </title>
+
+    <script src="assist/js/jquery-1.11.2.min.js"></script>
+    <script src="assist/js/jquery.nicescroll.min.js"></script>
+    <script src="assist/js/bootstrap.js"></script>
+
+    <script src="assist/js/base.js"></script>
+    <script src="assist/js/validator.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="main">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 animated fadeInDown">
+            <div class="dashboard-item box-pd card-4">
+
+                <div class="head-line">
+                          <span>
+ورود                     </span>
+                </div>
+                <div class="row">
+                    <form id="form">
+                        <div class="col-md-8 col-md-offset-2">
+
+                            <div class="mat-input-outer">
+                                <input id="username" type="text" name="username" required="required"
+                                       class="input col-sm-9" autocomplete="off">
+                                <label class="">نام کاربری</label>
+                                <div class="border"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="mat-input-outer">
+                                <input id="password" type="password" name="password" required="required"
+                                       class="input col-sm-9" autocomplete="off">
+                                <label class=""> کلمه عبور</label>
+                                <div class="border"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-8 col-md-offset-2 ">
+                            <div class="form-group  ">
+                                <div class="col-md-6">
+                                    <input required="" type="text" class="form-control" name="captcha" data-cu="salam">
+                                </div>
+                                <div class="col-md-6 control-label ">
+                                    <label style="margin-top: 8px;text-align: center;width: 100%" id="captchaOperation">=
+                                        4 + 10</label>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2 m-t-b">
+                            <button class="cu-btn btn" type="submit">
+                                ورود به پنل کاربری
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        // Generate a simple captcha
+        function randomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        };
+
+        var r1 = randomNumber(1, 25);
+        var r2 = randomNumber(1, 25);
+
+        $('#captchaOperation').html(['=', r1, '+', r2].join(' '));
+
+        var options = {
+            custom: {
+                cu: function ($el) {
+                    if ($el.val() != r1 + r2) {
+                        return "Hey, that's not valid! It's gotta be "
+                    }
+                }
+            }
+        };
+
+        $('#form').validator(options).on('submit', function (e) {
+            if (e.isDefaultPrevented()) {
+                // handle the invalid form...
+            } else {
+                // everything looks good!
+            }
+        });
+        // $('#ss').bootstrapValidator({
+        //     message: 'This value is not valid',
+        //     icon: {
+        //         valid: 'glyphicon glyphicon-ok',
+        //         invalid: 'glyphicon glyphicon-remove',
+        //         validating: 'glyphicon glyphicon-refresh'
+        //     },
+        // });
+    });
+
+</script>
+</html>
